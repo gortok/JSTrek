@@ -7,6 +7,15 @@ var TITLE_TEXT_COLOR = BACKGROUND_BORDER;
 var WINDOW_HEIGHT = 480;
 var WINDOW_WIDTH = 640;
 
+var _instructionScreen = false;
+var _splashScreen = true;
+var _gameScreen = false;
+
+var KC_ENTER = 13;
+var KC_Y = 89;
+var KC_N = 78;
+var KC_Q = 81;
+
 var paintWindow = function(canvas) { 
 		var ctx = canvas.getContext('2d');
 		ctx.fillStyle = BACKGROUND_COLOR;
@@ -21,7 +30,8 @@ var paintBorder = function(canvas) {
 	
 }
 
-var mainText = function(canvas) { 
+var paintMainWindow = function(canvas, callback) { 
+	_splashScreen = true;
 	var ctx = canvas.getContext('2d');
     //title
 	ctx.fillStyle = TITLE_TEXT_COLOR;
@@ -66,15 +76,50 @@ var mainText = function(canvas) {
 	ctx.lineWidth = 2;
 	ctx.stroke();
 	ctx.closePath();
-	
-	
-}  
+	callback();
+}
+  
 
 jsTrek.initialize = function() { 
 	var canvas = document.getElementById('jsTrekWindow');
 	paintWindow(canvas);
 	//paintBorder(canvas);
-	mainText(canvas);
+	paintMainWindow(canvas, function() { 
+		document.onkeypress(e) {
+			paintInstructionScreen(canvas, function() {
+				keypressInstructionScreen(e, instructions, gameloop);
+			});
+		}
+	});
+};
+	
+
+
+var paintShipNameLogo = function(canvas) { 
+	var ctx = canvas.getContext('2d');
+    ctx.fillStyle = TITLE_TEXT_COLOR;
+	ctx.font = "normal 32px Times New Roman";
+	ctx.fillText("U.S.S. Hood", 200, 90);
+	
+}
+
+var paintInstructionScreen = function(canvas, callback) {
+	paintWindow(canvas);
+	paintShipNameLogo(canvas);
+	callback();
+}
+
+var keyPressInstructionScreen = function(e, yesCallback, noCallback) {
+	var keyCode = (e||event).keyCode;
+	if (keyCode == KC_Y || keyCode = KC_ENTER) {
+		yesCallback();
+	}
+	if (keyCode == KC_N) {
+		noCallback();
+	}
+	if (keyCode == KC_Q) {
+		jsTrek.prototype.quit();
+	}
 }
 
 window.jsTrek = jsTrek;
