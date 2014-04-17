@@ -12,9 +12,9 @@ var _splashScreen = true;
 var _gameScreen = false;
 
 var KC_ENTER = 13;
-var KC_Y = 89;
-var KC_N = 78;
-var KC_Q = 81;
+var KC_Y = 121;
+var KC_N = 110;
+var KC_Q = 113;
 
 var paintWindow = function(canvas) { 
 		var ctx = canvas.getContext('2d');
@@ -98,11 +98,11 @@ jsTrek.initialize = function() {
 };
 	
 var gameloop = function() { 
-	alert("Got to game loop");
+	window.alert("Got to game loop");
 };
 
 var instructions = function() {
-	alert("Instructions display here!");
+	window.alert("Instructions display here!");
 };
 
 var paintShipNameLogo = function(canvas) { 
@@ -120,6 +120,7 @@ var paintInstructionScreen = function(canvas, callback) {
 }
 
 var keyPressInstructionScreen = function(e, yesCallback, noCallback) {
+	window.alert("HAI");
 	var keyCode = (e||event).keyCode;
 	if (keyCode == KC_Y || keyCode == KC_ENTER) {
 		yesCallback();
