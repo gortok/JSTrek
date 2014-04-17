@@ -85,15 +85,25 @@ jsTrek.initialize = function() {
 	paintWindow(canvas);
 	//paintBorder(canvas);
 	paintMainWindow(canvas, function() { 
-		document.onkeypress(e) {
+		document.onkeypress = zx; 
+		function zx(evt) {
 			paintInstructionScreen(canvas, function() {
-				keypressInstructionScreen(e, instructions, gameloop);
+				document.onkeypress = ev;
+				function ev(e){
+					keyPressInstructionScreen(e, instructions, gameloop);
+				};
 			});
-		}
+		};
 	});
 };
 	
+var gameloop = function() { 
+	alert("Got to game loop");
+};
 
+var instructions = function() {
+	alert("Instructions display here!");
+};
 
 var paintShipNameLogo = function(canvas) { 
 	var ctx = canvas.getContext('2d');
@@ -111,7 +121,7 @@ var paintInstructionScreen = function(canvas, callback) {
 
 var keyPressInstructionScreen = function(e, yesCallback, noCallback) {
 	var keyCode = (e||event).keyCode;
-	if (keyCode == KC_Y || keyCode = KC_ENTER) {
+	if (keyCode == KC_Y || keyCode == KC_ENTER) {
 		yesCallback();
 	}
 	if (keyCode == KC_N) {
