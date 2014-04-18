@@ -54,13 +54,21 @@ var getRandomArbitrary = function(min,max) {
 };
 
 var paintStarField = function(starField) {
-	var field = "";
+	var line1 = "  1 2 3 4 5 6 7 8\n1 ";
+	var field = line1;
 	console.dir(starField);
+	var n = 2;
 	for(var i = 1; i < starField.length; i++) {
-		field += starField[i];
+		field += starField[i] + " ";
 		if (i % 8 == 0) {
-			field += "\n";
+			field += "\n" + n + " ";
+			n++;
 		}
 	}
-	return field;
+	return field.substring(0, field.length - 3);
+}
+
+var doItAll = function() {
+	createStarField();
+	console.log(paintStarField(starField));
 }
