@@ -16,6 +16,35 @@ var KC_Y = 121;
 var KC_N = 110;
 var KC_Q = 113;
 
+var ranks = [
+	{
+		level: 1,
+		title: "Lt. Cmdr"
+	},
+	{
+		level: 2,
+		title: "Cmdr."
+	},
+	{
+		level: 3,
+		title: "Captain"
+	},
+	{	
+		level: 4,
+		title: "Commodore"
+	},
+	{
+		leve: 5,
+		title: "Admiral"
+	}
+];
+
+var gameSettings = {
+	name: "",
+	rank: 1,
+	destruct: ""
+};
+
 var paintWindow = function(canvas) { 
 		var ctx = canvas.getContext('2d');
 		ctx.fillStyle = BACKGROUND_COLOR;
@@ -98,7 +127,7 @@ jsTrek.initialize = function() {
 };
 	
 var gameloop = function() { 
-	window.alert("Got to game loop");
+	window.jsTrek.main.initialize(gameSettings);
 };
 
 var instructions = function() {

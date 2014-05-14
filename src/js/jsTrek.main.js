@@ -1,4 +1,5 @@
-var jsTrek.main = window.jstTrek.main || {};
+var jsTrek = window.jsTrek;
+jsTrek.main = {};
 
 var star = { 
 	chance: 08,
@@ -25,6 +26,20 @@ var empty = {
 
 var choices = [star,starBase,planet];
 
+var initialize = function(settings) {
+	jsTrek.main.settings = settings;
+	renderMainGameScreen();
+}
+
+var renderMainGameScreen = function() {
+	var canvas = document.getElementById('jsTrekWindow');
+	var ctx = canvas.getContext('2d');
+	window.jsTrek.paintWindow(canvas);
+	window.jsTrek.paintBorder(canvas);
+	window.jsTrek.main.paintStarField(createStarField());
+}
+
+
 var starField = [];
 var createStarField = function() {
 	for (var k = 1; k <= 64; k++) {
@@ -36,6 +51,7 @@ var createStarField = function() {
 			starField[k] = empty.display;
 		}
 	}
+	return starField;
 };
 var determineObject = function(arr) {
 	console.dir(arr);
@@ -72,3 +88,5 @@ var doItAll = function() {
 	createStarField();
 	console.log(paintStarField(starField));
 }
+
+window.jsTrek.main = jsTrek.main;
