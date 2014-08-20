@@ -7,6 +7,16 @@ var TITLE_TEXT_COLOR = BACKGROUND_BORDER;
 var WINDOW_HEIGHT = 480;
 var WINDOW_WIDTH = 640;
 
+var gameText = [
+	INSTRUCTION_QUESTION: {
+		text: 'Do you require a briefing?'
+		options: [
+		{key: 'Y', event: launchInstructionScreen}, {key:'N',event: skip }]
+		
+	}];
+
+
+
 var paintWindow = function(canvas) { 
 		var ctx = canvas.getContext('2d');
 		ctx.fillStyle = BACKGROUND_COLOR;
@@ -19,6 +29,27 @@ var paintBorder = function(canvas) {
 	ctx.strokeStyle = BACKGROUND_BORDER;
 	ctx.strokeRect(2,2,WINDOW_WIDTH - 4, WINDOW_HEIGHT - 4);
 	
+}
+
+var startGameLoop = function(canvas) {
+	paintInstructionScreen(canvas);
+}
+
+var paintInstructionScreen(canvas) {
+	clearGameScreen(canvas);
+	paintInstructionQuestion(canvas);
+}
+var paintInstructionQuestion(canvas) {
+	var c = canvas.getContext('2d');
+	c.font = "normal 14px system";
+	c.fillStyle = "rgb(0,0,0)";
+	c.fillText(INSTRUCTION_QUESTION, 15, 200);
+
+	$('#canvas-wrapper').append(INSTRUCTION_QUESTION.text);
+}
+
+var clearScreen = function(canvas) {
+	paintWindow(canvas);
 }
 
 var mainText = function(canvas) { 
@@ -75,6 +106,7 @@ jsTrek.initialize = function() {
 	paintWindow(canvas);
 	//paintBorder(canvas);
 	mainText(canvas);
+	startGameLoop();
 }
 
 window.jsTrek = jsTrek;

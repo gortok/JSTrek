@@ -1,0 +1,2 @@
+#canvas-wrapper { position:relative width:800px; height:600px } 
+#canvas-wrapper canvas    { position:absolute; top:0px; left:0 px; z-index: 0 }
