@@ -41,7 +41,7 @@ var renderMainGameScreen = function() {
 
 
 var starField = [];
-var createStarField = function() {
+var populateStarField = function() {
 	for (var k = 1; k <= 64; k++) {
 		var choice = determineObject(choices);
 		if (choice !== undefined) {
@@ -69,10 +69,9 @@ var getRandomArbitrary = function(min,max) {
 	return Math.floor(Math.random() * (max-min + 1)) + min;
 };
 
-var paintStarField = function(starField) {
+var constructStarFieldVisual = function(starField) {
 	var line1 = "  1 2 3 4 5 6 7 8\n1 ";
 	var field = line1;
-	console.dir(starField);
 	var n = 2;
 	for(var i = 1; i < starField.length; i++) {
 		field += starField[i] + " ";
@@ -84,9 +83,9 @@ var paintStarField = function(starField) {
 	return field.substring(0, field.length - 3);
 }
 
-var doItAll = function() {
-	createStarField();
-	console.log(paintStarField(starField));
-}
+jsTrek.main.paintStarField = function() {
+	return constructStarFieldVisual(populateStarField());
+};
+
 
 window.jsTrek.main = jsTrek.main;

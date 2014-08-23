@@ -147,6 +147,7 @@ jsTrek.initialize = function() {
 	
 var gameloop = function() { 
 	window.jsTrek.main.initialize(gameSettings);
+	window.jsTrek.main.paintStarField();
 };
 
 var instructions = function() {
