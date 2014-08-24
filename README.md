@@ -1,4 +1,3 @@
 JSTrek
 ======
-
-JavaScript clone of EGA Trek
+JavaScript/HTML5 re-imagining of the classic DOS game, EGATrek.
