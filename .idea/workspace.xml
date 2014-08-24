@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611aa40d-3421-4f65-8bce-dc0bb8f639c8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/jstrek_quintus.js" afterPath="$PROJECT_DIR$/src/js/jstrek_quintus.js" />
     </list>
     <ignored path="JSTrek.iws" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="63" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="435">
+            <state line="12" column="63" selection-start="353" selection-end="353" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
@@ -65,7 +64,7 @@
       <file leaf-file-name="jstrek_quintus.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/jstrek_quintus.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="810">
+            <state line="0" column="0" selection-start="0" selection-end="1367" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -80,10 +79,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="starField.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="starField.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/starField.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="6" selection-start="64" selection-end="64" vertical-scroll-proportion="0.12155592" vertical-offset="0" max-vertical-offset="617">
               <folding />
             </state>
           </provider>
@@ -105,8 +113,9 @@
         <option value="$PROJECT_DIR$/src/js/jsTrek.js" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/js/game.js" />
-        <option value="$PROJECT_DIR$/src/js/jstrek_quintus.js" />
         <option value="$PROJECT_DIR$/src/data/sprites.json" />
+        <option value="$PROJECT_DIR$/src/js/jstrek_quintus.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -160,38 +169,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSTrek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSTrek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSTrek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSTrek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -200,6 +177,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistory" value="" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -329,13 +307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="63" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/jsTrek.main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
@@ -350,13 +321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/jstrek_quintus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/sprites.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="29" selection-start="279" selection-end="279" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="255">
@@ -367,6 +331,27 @@
     <entry file="file://$PROJECT_DIR$/src/data/starField.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="63" selection-start="353" selection-end="353" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/jstrek_quintus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="1367" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="6" selection-start="64" selection-end="64" vertical-scroll-proportion="0.12155592" vertical-offset="0" max-vertical-offset="617">
           <folding />
         </state>
       </provider>
