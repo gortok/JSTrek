@@ -25,9 +25,9 @@ window.addEventListener("load", function() {
 	var SPRITE_STARBASE = 32;
     Q.input.keyboardControls();
 	Q.input.joypadControls();
-    Q.scene("board", function(stage) {
+    Q.scene("starField", function(stage) {
 		Q.load("assets/sprites/empty_grid_tile.png", "sprites.json");
-		Q.stageScene("board");
+		Q.stageScene("starField");
 	});
 	Q.Sprite.extend("Empty_Grid_Tile", {
 		init: function(p) {
@@ -35,13 +35,15 @@ window.addEventListener("load", function() {
 				x:1,
 				y:1
 			});
-		}
+            for(var i = 1; i <=10; i++) {
+                for (var j = 1; j <=10; j++ {
+                    var b = new Q.Empty_Grid_Tile({ x: i*50, y: j*50, scale: 2 });
+                }
+            }
+        }
 	});
+
 	
-	for(var i = 1; i <=10; i++) {
-		for (var j = 1; j <=10; j++ {
-			var b = new Q.Empty_Grid_Tile({ x: i*100, y: j*100, scale: 2 });
-		}
-	}	
+
 	
 }
